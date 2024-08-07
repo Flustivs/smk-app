@@ -1,1 +1,123 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Hill";
+    src: url("../src/assets/Fonts/Hill.woff");
+  }
+  
+  .fade-button {
+    position: absolute;
+    border-color: rgb(245, 245, 245);
+    border-style: solid;
+    border-width: 2px;
+    box-sizing: border-box;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 60px;
+    line-height: 45px;
+    background: transparent;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Hill";
+    color: rgb(245, 245, 245);
+    overflow: hidden;
+  }
+  
+  .fade-button:hover {
+    border: none;
+  }
+  
+  .fade-button span {
+    display: block;
+    background: rgb(245, 245, 245);
+  }
+  
+  .fade-button span:nth-child(1),
+  .fade-button span:nth-child(3) {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+  }
+  
+  .fade-button span:nth-child(2),
+  .fade-button span:nth-child(4) {
+    position: absolute;
+    height: 100%;
+    width: 2px;
+  }
+  
+  /* Keyframes for each side */
+  @keyframes slideInFromLeft {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 0;
+    }
+  }
+  
+  @keyframes slideInFromTop {
+    0% {
+      top: -100%;
+    }
+    100% {
+      top: 0;
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    0% {
+      right: -100%;
+    }
+    100% {
+      right: 0;
+    }
+  }
+  
+  @keyframes slideInFromBottom {
+    0% {
+      bottom: -100%;
+    }
+    100% {
+      bottom: 0;
+    }
+  }
+  
+  /* Initial positions */
+  .fade-button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+  }
+  
+  .fade-button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+  }
+  
+  .fade-button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+  }
+  
+  .fade-button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+  }
+  
+  /* Hover states */
+  .fade-button:hover span:nth-child(1) {
+    animation: slideInFromLeft 0.2s forwards;
+  }
+  
+  .fade-button:hover span:nth-child(2) {
+    animation: slideInFromTop 0.2s forwards 0.2s;
+  }
+  
+  .fade-button:hover span:nth-child(3) {
+    animation: slideInFromRight 0.2s forwards 0.4s;
+  }
+  
+  .fade-button:hover span:nth-child(4) {
+    animation: slideInFromBottom 0.2s forwards 0.6s;
+  }
+  
