@@ -1,8 +1,29 @@
+:root{
+  background-color: #111111;
+}
+
 @font-face {
     font-family: "Hill";
     src: url("../src/assets/Fonts/Hill.woff");
   }
   
+  @font-face {
+    font-family: "Hill-light";
+    src: url("../src/assets/Fonts/Hill-Light.woff");
+  }
+
+  @font-face {
+    font-family: "Hill-bold";
+    src: url("../src/assets/Fonts/Hill-Demibold.woff");
+  }
+
+/* .background{
+  margin-top: -10%;
+  margin-left: -1%;
+  width: 99.5vw;
+  height: 98vh;
+} */
+
   .fade-button {
     position: absolute;
     border-color: rgb(245, 245, 245);

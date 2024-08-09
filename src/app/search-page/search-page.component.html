@@ -1,0 +1,17 @@
+<div class="background">
+    <a class="fade-button" style="left: 115px; top: 183px; font-size: 14px; width: 70px; height: 50px;">Filtre
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+    <div>
+        <img src="../../assets/pictures/close-button.png" (click)="clearsearch()"
+            style="width: 15px; height: 15px; position: absolute; top: 240px; right: 100px;" />
+        <img src="../../assets/pictures/search-interface-symbol.png" (click)="getAllArt()"
+            style="width: 30px; height: 30px; position: absolute; top: 240px; left: 860px;" />
+        <input type="text" [(ngModel)]="key" (keydown.enter)="searchArt()" class="search-bar" placeholder="Hvad leder du efter?" />
+        <p class="sub-help">Fx kat, Hammershøj, natur</p>
+    </div>
+    <div id="pictureContainer"></div>
+</div>
