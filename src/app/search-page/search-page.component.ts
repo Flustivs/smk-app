@@ -39,14 +39,17 @@ export class SearchPageComponent {
   }
 
   makeImagaes(images: string[]) {
-    let div = document.getElementById('pictureContainer');
+    const gridContainer = document.getElementById('imageGrid');
     images.forEach((picture: any) => {
-      let img = document.createElement('img');
-      img.src = picture;
-      img.style.width = '10%';
-      img.style.height = '10%';
+      const gridItem = document.createElement('div');
+      gridItem.classList.add('grid-item');
 
-      div?.appendChild(img);
+      const img = document.createElement('img');
+      img.src = picture;
+      img.alt = 'Image';
+
+      gridItem.appendChild(img);
+      gridContainer?.appendChild(gridItem);
     });
   }
 

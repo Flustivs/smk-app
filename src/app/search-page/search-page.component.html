@@ -5,13 +5,14 @@
         <span></span>
         <span></span>
     </a>
-    <div>
+    <div >
         <img src="../../assets/pictures/close-button.png" (click)="clearsearch()"
             style="width: 15px; height: 15px; position: absolute; top: 240px; right: 100px;" />
         <img src="../../assets/pictures/search-interface-symbol.png" (click)="getAllArt()"
             style="width: 30px; height: 30px; position: absolute; top: 240px; left: 860px;" />
         <input type="text" [(ngModel)]="key" (keydown.enter)="searchArt()" class="search-bar" placeholder="Hvad leder du efter?" />
+        <hr style="border: none; height: 1px; background-color: white; width: 717px; position: absolute; top: 32%; right: 109px;">
         <p class="sub-help">Fx kat, Hammershøj, natur</p>
     </div>
-    <div id="pictureContainer"></div>
+    <div class="grid-container" id="imageGrid"></div>
 </div>

@@ -13,14 +13,14 @@ li {
 li a {
     margin-right: 10px;
     display: block;
-    font-size: 22px;
+    font-size: 18px;
     color: rgba(158, 158, 158, 0.962);
     padding: 10px;
     text-decoration: none;
+    font-family: "Hill-bold";
 }
 
 li a:hover {
     color: white;
-    font-size: 23px;
-    transform: 0.1s;
+    transform: 0.2s;
 }
