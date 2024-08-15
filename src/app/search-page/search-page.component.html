@@ -5,13 +5,43 @@
         <span></span>
         <span></span>
     </a>
-    <div >
+    <div>
         <img src="../../assets/pictures/close-button.png" (click)="clearsearch()"
             style="width: 15px; height: 15px; position: absolute; top: 24.5%; right: 7%;" />
         <img src="../../assets/pictures/search-interface-symbol.png" (click)="getAllArt()"
             style="width: 30px; height: 30px; position: absolute; top: 24.5%; left: 53%;" />
-        <input type="text" [(ngModel)]="key" (input)="searchArt()" class="search-bar" placeholder="Hvad leder du efter?" />
-        <hr style="border: none; height: 1px; background-color: white; width: 40%; position: absolute; top: 30%; right: 7%;">
+        <input type="text" [(ngModel)]="key" (input)="searchArt()" class="search-bar"
+            placeholder="Hvad leder du efter?" />
+        <hr
+            style="border: none; height: 1px; background-color: white; width: 40%; position: absolute; top: 30%; right: 7%;">
+        <div id="filter">
+            <p style="position: absolute; top: 34%; left: 4%; color: rgb(245, 245, 245); font-size: 30px; font-family: Hill;" id="amount"></p>
+            <p style="position: absolute; top: 37%; left: 10%; color: rgb(187, 187, 187); font-size: 15px; font-family: Hill;">Værker</p>
+            <label class="checklabel" style="left: 14%;" (click)="Filter()">
+                <input class="checkbox" id="free-use" type="checkbox" />
+                <span class="checkbox-text" (click)="stopPropagation($event)">Til fri brug</span>
+            </label>
+
+            <label class="checklabel" style="left: 21%;" (click)="Filter()">
+                <input class="checkbox" id="foto" type="checkbox" />
+                <span class="checkbox-text" (click)="stopPropagation($event)">Med foto</span>
+            </label>
+
+            <label class="checklabel" style="left: 28%;" (click)="Filter()">
+                <input class="checkbox" id="big-foto" type="checkbox"/>
+                <span class="checkbox-text" (click)="stopPropagation($event)">Med Stort foto</span>
+            </label>
+
+            <label class="checklabel" style="left: 35%;" (click)="Filter()">
+                <input class="checkbox" id="3d-foto" type="checkbox" />
+                <span class="checkbox-text" (click)="stopPropagation($event)">Med 3D</span>
+            </label>
+
+            <label class="checklabel" style="left: 42%;" (click)="Filter()">
+                <input class="checkbox" id="SMK" type="checkbox"/>
+                <span class="checkbox-text" (click)="stopPropagation($event)">Udstillet på SMK</span>
+            </label>
+        </div>
         <p class="sub-help">Fx kat, Hammershøj, natur</p>
     </div>
     <div id="picturecontainer" class="picturecontainer"></div>
